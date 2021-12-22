@@ -1,0 +1,56 @@
+<div *ngIf="good" class="modal-good">
+  <div class="container">
+    <div class="row">
+
+      <div id="carouselExampleIndicators" class="carousel carousel-dark slide col-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{good.img}}" class="d-block" alt="{{good.title}}">
+          </div>
+          <div class="carousel-item">
+            <img src="{{good.imgHover}}" class="d-block " alt="{{good.title}}">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+
+      </div>
+
+      <div class="col-5">
+
+        <div class="modal-good__title">
+          <h3>{{good.title}} </h3>
+        </div>
+        <div class="modal-good__price">
+          {{good.price}} UAH
+        </div>
+
+        <div class="d-grid col-6">
+          <button type="button" class="btn modal-good__btn btn-outline-secondary"
+            (click)="addToCart(good)">Купить</button>
+        </div>
+      </div>
+
+      <div class="col-1">
+        <button class="btn modal-good__btn-gb btn-outline-secondary" (click)="goBack()"><i
+            class="fas fa-long-arrow-alt-left"></i><br>
+          <p>GO BACK</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

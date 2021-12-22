@@ -1,0 +1,38 @@
+<div class="cart container">
+  <h2>Корзина с товарами</h2>
+
+  <h3 *ngIf="items.length < 1" class="cart-empty">В корзине пока нет товаров...</h3>
+
+  <div *ngIf="items.length > 0">
+    <div class="cart-container" *ngFor="let item of items;let i = index">
+      <div class="row cart-item">
+        <div class="col-8">
+          <div class="row">
+            <div class="col-8">
+              <h3>{{item.title}}</h3>
+            </div>
+            <div class="col-4">
+              <h3>{{item.price}} UAH</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10">
+              <input name="file" type="file" class="form-control" aria-describedby="fileHelp">
+              <div id="fileHelp" class="form-text">Прикрепите вашу фотографиюю</div>
+            </div>
+          </div>
+        </div>
+        <div class=" cart-img col-2">
+          <img src="{{item.img}}" alt="">
+          <button class="btn btn-delete" title="delete item" (click)="delete(item.title)">x</button>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid col-6 mx-auto">
+      <button type="button" class="btn btn-outline-secondary" (click)="clearCart()">Очистить корзину</button>
+    </div>
+    <div class="d-grid col-6 mx-auto">
+      <button type="button" class="btn btn-buy btn-outline-secondary">Оформить покупку</button>
+    </div>
+  </div>
+</div>

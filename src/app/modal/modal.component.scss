@@ -1,0 +1,37 @@
+.modal-good {
+  margin: 70px 0;
+
+  &__title {
+    margin: 30px;
+    font-size: 35px;
+  }
+
+  &__price {
+    margin: 30px;
+    font-size: 24px;
+  }
+
+  &__btn {
+    margin: 30px;
+
+    &-gb {
+      font-size: 30px;
+      border: none;
+      margin-top: -30px;
+
+      p {
+        font-size: 14px;
+        margin-top: -15px;
+      }
+    }
+  }
+
+  .carousel-item {
+    height: calc(100vh - 248px);
+
+    img {
+      height: 100%;
+      margin: auto;
+    }
+  }
+}

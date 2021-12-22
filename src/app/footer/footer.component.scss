@@ -1,0 +1,25 @@
+.footer {
+  background-color: rgb(32, 32, 32);
+  &-link {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 15px;
+
+    > div {
+      transition: margin-top 0.6s;
+      &:hover {
+        margin-top: -7px;
+      }
+    }
+
+    a {
+      font-size: 28px;
+      color: rgb(206, 224, 224);
+
+      &:hover {
+        color: rgb(248, 249, 250);
+      }
+    }
+  }
+}

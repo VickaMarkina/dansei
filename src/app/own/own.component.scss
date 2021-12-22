@@ -1,0 +1,9 @@
+.own {
+  min-height: calc(100vh - 128px);
+  &-subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -30px;
+    margin-bottom: 90px;
+  }
+}

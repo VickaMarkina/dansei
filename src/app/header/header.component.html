@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">DANSEI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/home">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/goods">Диджитал-ателье</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/own">Изделие под заказ</a>
+        </li>
+      </ul>
+      <form class="d-flex me-2 me-lg-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+      <button routerLink="/cart" type="button" class="header-navbar-btn btn btn-outline-primary position-relative">
+        <i class="fas fa-shopping-cart"></i>
+        <span *ngIf="cartItems.length > 0"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+          {{cartItems.length}}</span>
+      </button>
+    </div>
+  </div>
+</nav>
