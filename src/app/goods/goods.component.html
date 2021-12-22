@@ -2,7 +2,7 @@
   <h2 class="goods-title">На этой странице вы можете выбрать готовые изделия</h2>
   <div class=" goods-container row">
 
-    <div class="goods-item col-3" *ngFor="let good of goods">
+    <div class="goods-item col-xl-3 col-lg-4 col-sm-6 " *ngFor="let good of goods">
       <div class="goods-item__wrapper" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
         routerLink="/modal/{{good.title}}">
         <img class="goods-item__wrapper-nothover" src="{{good.img}}" alt="goods">

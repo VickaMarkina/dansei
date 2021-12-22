@@ -8,14 +8,11 @@
       aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../assets/img/Artboard 2.jpg" class="d-block w-100" alt="...">
+    <div class="carousel-item active" style="background-image: url(../../assets/img/Artboard\ 2.jpg);">
     </div>
-    <div class="carousel-item">
-      <img src="../../assets/img/Artboard 1.jpg" class="d-block w-100" alt="...">
+    <div class="carousel-item" style="background-image: url(../../assets/img/Artboard\ 1.jpg);">
     </div>
-    <div class="carousel-item">
-      <img src="../../assets/img/wdms36tzneq.jpg" class="d-block w-100" alt="...">
+    <div class="carousel-item" style="background-image: url(../../assets/img/wdms36tzneq.jpg);">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -32,7 +29,7 @@
     <h1 class="main-title">DANSEI</h1>
     <p class="main-subtitle">Твой магазин цифровой одежды</p>
     <div class="main-text row">
-      <div class="main-text__first col-lg-6">
+      <div class="main-text__first col-xl-6 col-lg-7">
         <p>С развитием соцсетей многие стали покупать вещи для создания контента, но после появления на фото обновка в
           лучшем случае
           возвращается обратно в магазин, а в худшем — захламляет гардероб или отправляется на свалку.</p>
@@ -48,14 +45,14 @@
           диджитал-коллекцию, а потом уже отшивает самые популярные модели. Отшиваться будет только та
           одежда, которую купят, а не бесконечные изделия для магазинных рейлов и последующего сжигания».</p>
       </div>
-      <div class="main-text__img col-lg-6">
+      <div class="main-text__img col-xl-6 col-lg-5">
         <img src="../../assets/img/main_img_1.PNG" alt="main_img">
       </div>
     </div>
     <div class="main-steps">
       <h2> Как примерить цифровую вещь?</h2>
       <div class="steps row">
-        <div class="steps-item col">
+        <div class="steps-item col-sm-4">
           <div class=" steps-item__number">
             <p>1</p>
           </div>
@@ -63,7 +60,7 @@
           <p class="steps-item__subtitle">Сначала в <a class="steps-item__subtitle-link"
               routerLink="/goods">диджитал-ателье</a> нужно выбрать свой цифровой лук.</p>
         </div>
-        <div class="steps-item col">
+        <div class="steps-item col-sm-4">
           <div class=" steps-item__number">
             <p>2</p>
           </div>
@@ -71,7 +68,7 @@
           <p class="steps-item__subtitle">Понравившийся лук нужно добавить в корзину, потом загрузить свою фотографию
             и оплатить покупку.</p>
         </div>
-        <div class="steps-item col">
+        <div class="steps-item col-sm-4">
           <div class=" steps-item__number">
             <p>3</p>
           </div>
@@ -91,7 +88,7 @@
   <div class="container">
     <div class="row">
       <h2>Последняя коллекция</h2>
-      <div class="goods-item col-3" *ngFor="let good of goods">
+      <div class="goods-item col-xl-3 col-lg-6" *ngFor="let good of goods">
         <div class="goods-item__wrapper" routerLink="/modal/{{good.title}}">
           <img class="goods-item__wrapper-nothover" src="{{good.img}}" alt="goods">
           <img class="goods-item__wrapper-hover" src="{{good.imgHover}}" alt="goods">

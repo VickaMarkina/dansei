@@ -8,23 +8,24 @@
       <div class="row cart-item">
         <div class="col-8">
           <div class="row">
-            <div class="col-8">
+            <div class="col-md-8">
               <h3>{{item.title}}</h3>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 ">
               <h3>{{item.price}} UAH</h3>
             </div>
           </div>
           <div class="row">
-            <div class="col-10">
+            <div class="col-sm-10 col-12">
               <input name="file" type="file" class="form-control" aria-describedby="fileHelp">
               <div id="fileHelp" class="form-text">Прикрепите вашу фотографиюю</div>
             </div>
           </div>
         </div>
-        <div class=" cart-img col-2">
+        <div class=" cart-img col-lg-2 col-md-4 col-sm-4 col-4">
           <img src="{{item.img}}" alt="">
-          <button class="btn btn-delete" title="delete item" (click)="delete(item.title)">x</button>
+          <button class="btn btn-delete" title="delete item " (click)="delete(item.title)"><i
+              class="fas fa-times"></i></button>
         </div>
       </div>
     </div>

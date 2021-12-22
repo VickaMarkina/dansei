@@ -1,3 +1,6 @@
+@import "../../mixins-media";
+@import "../../variables";
+
 .navbar-nav {
   flex-grow: 1;
   padding-right: 40px;
@@ -5,7 +8,20 @@
 }
 
 .header-navbar-btn {
-  margin-left: 8px;
+  @include lg-min {
+    margin-left: 8px;
+    .cart-title {
+      display: none;
+    }
+  }
+
+  @include lg {
+    margin: 16px 0;
+    width: 100%;
+    .cart-title {
+      margin-left: 8px;
+    }
+  }
 }
 
 .top-0 {
