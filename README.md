@@ -1,2 +1,2 @@
-Firebase deploy: https://dansei.web.app/home
+Firebase deploy https://dansei.web.app/home
 
