@@ -1,3 +1,6 @@
+@import "../../mixins-media";
+@import "../../variables";
+
 .modal-good {
   margin: 70px 0;
 
@@ -7,8 +10,15 @@
   }
 
   &__price {
-    margin: 30px;
     font-size: 24px;
+
+    @include md-min {
+      margin: 30px;
+    }
+
+    @include md {
+      margin: -10px 30px;
+    }
   }
 
   &__btn {
@@ -22,6 +32,15 @@
       p {
         font-size: 14px;
         margin-top: -15px;
+        white-space: nowrap;
+
+        @include lg {
+          display: none;
+        }
+      }
+
+      @include md {
+        display: none;
       }
     }
   }

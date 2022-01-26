@@ -28,12 +28,18 @@ export class ModalComponent implements OnInit {
     const title = String(this.route.snapshot.paramMap.get('title'));
     this.goodsService.getGood(title)
     .subscribe(good => this.good = good);
-console.log(this.good)
     return this.good
   }
 
-  addToCart(product: any) {
-    this.cartService.addToCart(product);
+  addToCart(good: any, event: any) {
+    this.cartService.addToCart(good);
+
+    const e = event;
+    e.target.disabled = true;
+    e.target.innerHTML = 'Товар добавлен в корзину';
+
+    setTimeout(() => {return e.target.disabled = false, e.target.innerHTML = 'Купить'; 
+    },2000)
   }
 
   goBack(): void {

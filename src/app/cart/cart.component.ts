@@ -8,6 +8,7 @@ import { CartService } from './cart.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  delay = 500
   
   items!: any;
   

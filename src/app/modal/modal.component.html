@@ -2,7 +2,8 @@
   <div class="container">
     <div class="row">
 
-      <div id="carouselExampleIndicators" class="carousel carousel-dark slide col-6" data-bs-ride="carousel">
+      <div id="carouselExampleIndicators" class="carousel carousel-dark slide col-lg-6 col-md-8"
+        data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
@@ -30,18 +31,18 @@
 
       </div>
 
-      <div class="col-5">
+      <div class="col-lg-5 col-md-3">
 
-        <div class="modal-good__title">
+        <div class="modal-good__title" data-aos="fade-left" data-aos-delay="100">
           <h3>{{good.title}} </h3>
         </div>
-        <div class="modal-good__price">
+        <div class="modal-good__price" data-aos="fade-left" data-aos-delay="400">
           {{good.price}} UAH
         </div>
 
-        <div class="d-grid col-6">
+        <div class="d-grid col-lg-6" data-aos="fade-left" data-aos-delay="800">
           <button type="button" class="btn modal-good__btn btn-outline-secondary"
-            (click)="addToCart(good)">Купить</button>
+            (click)="addToCart(good, $event)">Купить</button>
         </div>
       </div>
 

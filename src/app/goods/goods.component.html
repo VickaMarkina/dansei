@@ -1,5 +1,5 @@
 <div class="goods container-fluid">
-  <h2 class="goods-title">На этой странице вы можете выбрать готовые изделия</h2>
+  <h2 class="goods-title" data-aos="zoom-in">На этой странице вы можете выбрать готовые изделия</h2>
   <div class=" goods-container row">
 
     <div class="goods-item col-xl-3 col-lg-4 col-sm-6 " *ngFor="let good of goods">
@@ -20,7 +20,7 @@
 
 
       <div class="d-grid col-6 mx-auto">
-        <button type="button" class="btn btn-outline-secondary" (click)="addToCart(good)">Купить</button>
+        <button type="button" class="btn btn-outline-secondary" (click)="addToCart(good, $event)">Купить</button>
       </div>
     </div>
 

@@ -13,10 +13,17 @@ export class GoodsComponent implements OnInit {
   constructor(private cartService: CartService,) { }
 
   ngOnInit(): void {
+    
   }
 
-  addToCart(product: any) {
+  addToCart(product: any, event: any) {
     this.cartService.addToCart(product);
-  }
 
+    const e = event;
+    e.target.disabled = true;
+    e.target.innerHTML = 'Товар добавлен в корзину';
+
+    setTimeout(() => {return e.target.disabled = false, e.target.innerHTML = 'Купить'; 
+    },2000)
+  }
 }

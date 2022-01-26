@@ -1,11 +1,12 @@
 <div class="cart container">
-  <h2>Корзина с товарами</h2>
+  <h2 data-aos="zoom-in">Корзина с товарами</h2>
 
-  <h3 *ngIf="items.length < 1" class="cart-empty">В корзине пока нет товаров...</h3>
+  <h3 *ngIf="items.length < 1" class="cart-empty" data-aos="fade-up" data-aos-delay="300">В корзине пока нет товаров...
+  </h3>
 
   <div *ngIf="items.length > 0">
     <div class="cart-container" *ngFor="let item of items;let i = index">
-      <div class="row cart-item">
+      <div data-aos="fade-right" data-aos-delay="500" class="row cart-item">
         <div class="col-8">
           <div class="row">
             <div class="col-md-8">
@@ -29,11 +30,13 @@
         </div>
       </div>
     </div>
-    <div class="d-grid col-6 mx-auto">
-      <button type="button" class="btn btn-outline-secondary" (click)="clearCart()">Очистить корзину</button>
+    <div class="d-grid col-lg-6 col-12 mx-auto">
+      <button type="button" class="btn btn-outline-secondary" (click)="clearCart()" data-aos="fade-up"
+        data-aos-delay="100">Очистить корзину</button>
     </div>
-    <div class="d-grid col-6 mx-auto">
-      <button type="button" class="btn btn-buy btn-outline-secondary">Оформить покупку</button>
+    <div class="d-grid col-lg-6 col-12 mx-auto">
+      <button type="button" class="btn btn-buy btn-outline-secondary" data-aos="fade-up" data-aos-delay="300">Оформить
+        покупку</button>
     </div>
   </div>
 </div>
